@@ -12,7 +12,7 @@ cursor = banco.cursor()
 #def sistema():
 janela = Tk()
 janela.title("Biblioteca")
-janela.geometry("1000x520+250+100") 
+janela.geometry("1000x550+250+100") 
 janela.config(background='white')
 janela.iconphoto(False, PhotoImage(file='imagens/favicon.png'))
 janela.resizable(False,False)
@@ -23,8 +23,7 @@ label_imagem = Label(frame_topo, image=img, bg='#302796')
 label_imagem.place(x=17, y=8)                                                                                                                       
 texto = Label(frame_topo, text='Nossa Livraria!', font='Inter 16', bg='#302796', fg='white')
 texto.place(x=53, y=10)
-frame_principal = Frame (width=800, height=358)
-frame_principal.pack(side=RIGHT)  
+
 #funçoes
 # essa função controla os botões de ações e chamar outras funções 
 def control(i):
@@ -39,32 +38,32 @@ def control(i):
     
 def cadastrarUsuarios():
     #frame entrada de dados
-    frame_conteudo_usuarios = Frame(frame_principal, width=800, height=358, bg='white')
-    frame_conteudo_usuarios.pack(side='left')
+    frame_conteudo_usuarios = Frame(frame_principal, width=709, height=458, bg='#F3F3F3')
+    frame_conteudo_usuarios.pack(side=RIGHT, padx=15)
 
     #cadastro de usuários
-    titulo_usuarios = Label(frame_conteudo_usuarios, text='Cadastro de Usuários', fg='black' , bg='white', font=('Inter 14'))
+    titulo_usuarios = Label(frame_conteudo_usuarios, text='Cadastro de Usuários', fg='black' , bg='#F3F3F3', font=('Inter 14'))
     titulo_usuarios.place(x=20,y=0)
     #entrada de dados nome
-    nome = Label(frame_conteudo_usuarios, text='Nome:', fg='#8C8B8B' , font=('Inter 12'), bg='white')
+    nome = Label(frame_conteudo_usuarios, text='Nome:', fg='#8C8B8B' , font=('Inter 12'), bg='#F3F3F3')
     nome.place(x=20,y=25)
     entry_nome = customtkinter.CTkEntry(frame_conteudo_usuarios, width=296, height=30, fg_color='white', border_color='#B6B6B6', border_width=1, text_color='black' )
     entry_nome.place(x=20, y=47)
 
     #entrada de endereço
-    endereco = Label(frame_conteudo_usuarios, text='Endereço:', fg='#8C8B8B' , font=('Inter 12'), bg='white')
+    endereco = Label(frame_conteudo_usuarios, text='Endereço:', fg='#8C8B8B' , font=('Inter 12'), bg='#F3F3F3')
     endereco.place(x=322,y=25)
     entry_endereco = customtkinter.CTkEntry(frame_conteudo_usuarios, width=330, height=30, fg_color='white', border_color='#B6B6B6', border_width=1, text_color='black')
     entry_endereco.place(x=320, y=47)
 
     #entrada de telefone
-    telefone = Label(frame_conteudo_usuarios, text='Telefone:', fg='#8C8B8B' , font=('Inter 12'), bg='white')
+    telefone = Label(frame_conteudo_usuarios, text='Telefone:', fg='#8C8B8B' , font=('Inter 12'), bg='#F3F3F3')
     telefone.place(x=20,y=80)
     entry_telefone = customtkinter.CTkEntry(frame_conteudo_usuarios, width=160, height=30, fg_color='white', border_color='#B6B6B6', border_width=1, text_color='black')
     entry_telefone.place(x=20, y=102)
     
     #entrada de cpf
-    cpf = Label(frame_conteudo_usuarios, text='CPF:', fg='#8C8B8B' , font=('Inter 12'), bg='white')
+    cpf = Label(frame_conteudo_usuarios, text='CPF:', fg='#8C8B8B' , font=('Inter 12'), bg='#F3F3F3')
     cpf.place(x=185,y=80)
     entry_cpf = customtkinter.CTkEntry(frame_conteudo_usuarios, width=150, height=30, fg_color='white', border_color='#B6B6B6', border_width=1, text_color='black')
     entry_cpf.place(x=185, y=102) 
@@ -76,33 +75,33 @@ def cadastrarUsuarios():
 def cadastrarLivros():
 
     #frame entrada de dados
-    frame_conteudo = Frame(frame_principal, width=800, height=358, bg='white')
-    frame_conteudo.pack(side='left')
+    frame_conteudo = Frame(frame_principal, width=709, height=458, bg='#F3F3F3')
+    frame_conteudo.pack(side=RIGHT, padx=15)
 
     #cadastro de livros titulos
-    titulo = Label(frame_conteudo, text='Cadastro de Livros', fg='black' , bg='white', font=('Inter 14'))
-    titulo.place(x=20,y=0)
+    titulo = Label(frame_conteudo, text='Cadastro de Livros', fg='black' , bg='#F3F3F3', font=('Inter 14'))
+    titulo.place(x=20,y=20)
     #entrada de dados titulo
-    titulo = Label(frame_conteudo, text='Título:', fg='#8C8B8B' , font=('Inter 12'), bg='white')
-    titulo.place(x=20,y=25)
+    titulo = Label(frame_conteudo, text='Título:', fg='#8C8B8B' , font=('Inter 12'),bg='#F3F3F3')
+    titulo.place(x=20,y=48)
     entry_titulo = customtkinter.CTkEntry(frame_conteudo, width=296, height=30, fg_color='white', border_color='#B6B6B6', border_width=1, text_color='black' )
-    entry_titulo.place(x=20, y=47)
+    entry_titulo.place(x=20, y=66)
 
     #entrada de dados autor
-    autor = Label(frame_conteudo, text='Autor:', fg='#8C8B8B' , font=('Inter 12'), bg='white')
+    autor = Label(frame_conteudo, text='Autor:', fg='#8C8B8B' , font=('Inter 12'), bg='#F3F3F3')
     autor.place(x=322,y=25)
     entry_autor = customtkinter.CTkEntry(frame_conteudo, width=150, height=30, fg_color='white', border_color='#B6B6B6', border_width=1, text_color='black')
     entry_autor.place(x=320, y=47)
 
     #entrada de dados editora
-    editora = Label(frame_conteudo, text='Editora:', fg='#8C8B8B' , font=('Inter 12'), bg='white')
+    editora = Label(frame_conteudo, text='Editora:', fg='#8C8B8B' , font=('Inter 12'), bg='#F3F3F3')
     editora.place(x=20,y=80)
     entry_editora = customtkinter.CTkEntry(frame_conteudo, width=124, height=30, fg_color='white', border_color='#B6B6B6', border_width=1, text_color='black')
     entry_editora.place(x=20, y=102)
     
     
     #entrada de dados ano de publicação
-    ano = Label(frame_conteudo, text='Ano de publicação:', fg='#8C8B8B' , font=('Inter 12'), bg='white')
+    ano = Label(frame_conteudo, text='Ano de publicação:', fg='#8C8B8B' , font=('Inter 12'), bg='#F3F3F3')
     ano.place(x=160,y=80)
     entry_ano = customtkinter.CTkEntry(frame_conteudo, width=150, height=30, fg_color='white', border_color='#B6B6B6', border_width=1, text_color='black')
     entry_ano.place(x=160, y=102)
@@ -169,11 +168,13 @@ def cadastrarLivros():
     sb.place(x=500, y=100)
     treeview.config(yscrollcommand=sb.set)
     sb.config(command=treeview.yview)
-
+    
+frame_principal = Frame (width=709, height=450, bg='#F3F3F3')
+frame_principal.pack(side='right', padx=0)  
 
 #menus Frame
-fram_menus = Frame(janela, width=200, height=378)
-fram_menus.pack(side=LEFT)
+fram_menus = Frame(janela, width=245, height=455, bg='#F3F3F3')
+fram_menus.pack(side='left', padx=10)
 #menu título 
 texto = Label(fram_menus, text='Menus: ' ,fg='black' , font=('Inter 14'))
 texto.place(x=10, y=5)
