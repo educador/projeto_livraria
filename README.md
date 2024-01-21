@@ -1,2 +1,2 @@
 # projeto_livraria
- sistema de biblioteca
+ sistema de biblioteca em Python
