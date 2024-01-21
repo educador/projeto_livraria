@@ -25,3 +25,4 @@ def qtlivros():
         lista = cursor.fetchall()   
         for i in lista:
             print(i)  
+            
