@@ -1,5 +1,6 @@
 # projeto_livraria
 status: projeto em desenvolvimento
+
  Meu projeto em desktop Python e Tkinter foi desevolvido para auxiliar livrarias, com objetivo de gerenciar os livros. 
  
  # Tela de Gerenciamento de livros
