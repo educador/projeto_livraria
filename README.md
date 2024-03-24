@@ -1,6 +1,9 @@
 # projeto_livraria
 status: projeto em desenvolvimento
 
+
+![Class Diagram1](https://github.com/educador/projeto_livraria/assets/3937688/1642056f-f2bd-42b0-85c4-ec54981247f4)
+
  Meu projeto em desktop Python e Tkinter foi desevolvido para auxiliar livrarias, com objetivo de gerenciar os livros. 
  
  # Tela de Gerenciamento de livros
